@@ -9,23 +9,29 @@ body {
 #banner {
 	width: 100%;
 	height: 300px;
+	text-align: center;
 }
 
 .vid {
-	width: 100%;
+	width: 1000px;
 	margin: auto;
 }
 
 h1 {
 	color: white;
 	font-size: 54px;
-	width: 500px;
+	width: 1000px;
 	margin: auto;
+	text-align: center;
 }
 
 h2 {
 	color: white;
 	font-size: 20px;
-	width: 500px;
+	width: 1000px;
 	margin: auto;
+}
+
+#green {
+	color: green;
 }
