@@ -33,6 +33,10 @@ h2 {
 	margin: auto;
 }
 
+#center {
+	text-align: center;
+}
+
 #green {
 	color: green;
 }
@@ -64,7 +68,15 @@ a {
 	border: 3px solid white;
 	background: green;
 	padding: 3px;
+	margin: auto;
+}
+
+#num {
+	width: 275px;
+	text-align: center;
 }
 .number {
 	color: black;
+	width: 275px;
+	text-align: center
 }
