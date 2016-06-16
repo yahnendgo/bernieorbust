@@ -13,8 +13,10 @@ body {
 }
 
 .vid {
-	width: 1000px;
+	width: 500px;
 	margin: auto;
+	border: 3px solid green;
+	padding-top: 4px;
 }
 
 h1 {
@@ -26,14 +28,14 @@ h1 {
 	font: arial;
 }
 
-h2 {
+h2, #song {
 	color: white;
 	font-size: 20px;
 	width: 1000px;
 	margin: auto;
 }
 
-#center {
+.center {
 	text-align: center;
 }
 
@@ -44,6 +46,10 @@ h2 {
 #form {
 	width: 1200px;
 	margin: auto;
+}
+
+#formtext {
+	font-size: 36px;
 }
 
 a {
@@ -61,7 +67,7 @@ a {
 
 #count {
 	position: fixed;
-	top: 310px;
+	top: 510px;
 	right: 50px;
 	width: 275px;
 	height: 75px;
