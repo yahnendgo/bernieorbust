@@ -2,9 +2,9 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-body {
-	background-color: black;
-}
+// body {
+// 	background-color: black;
+// }
 
 #banner {
 	width: 100%;
@@ -13,27 +13,56 @@ body {
 }
 
 .vid {
-	width: 500px;
-	float: left;
-	margin-left: 200px;
-	margin-right: 25px;
-	border: 3px solid green;
-	padding-top: 4px;
+	width: 900px;
+	margin: auto;
+	padding-bottom: 70px;
+
+}
+
+p, h1, h2 {
+	width: 1000px;
+	margin: auto;
+	text-align: center;
+}
+
+p {
+	font: 22px arial, sans-serif;
+	font-size: 26px;
+}
+
+.left {
+	text-align: left;
 }
 
 h1 {
-	color: white;
-	font-size: 54px;
 	width: 1000px;
 	margin: auto;
-	// text-align: center;
-	font: arial;
+	font: 40px bold Times New Roman, sans-serif;
+}
+.smaller {
+	font-size: 20px;
 }
 
-h2, #song {
-	color: white;
-	font-size: 20px;
+.border, .borders {
 	width: 1000px;
+	margin: auto;
+	padding-top: 40px;
+	border-top: 2px solid gray;
+}
+
+.borders {
+	border-bottom: 2px solid gray;
+	padding-bottom: 40px;
+	margin-bottom: 40px;
+}
+
+.gray {
+	color: rgba(0, 0, 0, .6);
+}
+h2, #song {
+	// color: white;
+	font-size: 20px;
+	width: 900px;
 	margin: auto;
 }
 
@@ -50,16 +79,16 @@ h2, #song {
 }
 
 #form {
-	width: 1200px;
+	width: 650px;
 	margin: auto;
 }
 
 .formtext {
-	font-size: 34.5px;
+	font-size: 34px;
 }
 
 a {
-	color: white;
+	color: black;
 }
 
 .rap {
