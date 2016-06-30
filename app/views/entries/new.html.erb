@@ -1,0 +1,47 @@
+<div class="questionnaire-container">
+	<%= form_for @entry do |f| %>
+
+		<div class="q-name">
+			<%= f.label :fname, class: "q-label" %>
+			<%= f.text_field :lname, class: "q-input" %>
+
+			<%= f.label :lname, class: "q-label" %>
+			<%= f.text_field :lname, class: "q-input" %>
+
+			<button class="q-name-next">Next</button>
+		</div>
+
+		<div class="q-state">
+			<%= f.label :state, class: "q-label" %>
+			<!-- jquery drop down for state options -->
+
+			<button class="q-state-next">Next</button>
+		</div>
+
+		<div class="q-email">
+			<%= f.label :email, class: "q-label" %>
+			<%= f.text_field :email, class: "q-input" %>
+
+			<button class="q-email-next">Next</button>
+		</div>
+
+
+		<div class="q-quest-1">
+			<h3 class="q-label">If Bernie is not the democratic nominee, what would you do?</h3>
+			<!-- jquery radio buttons -->
+
+			
+				<!-- should only appear (jquery event listener) if option 2 is selected as an answer. if it is not, show submit button instead -->
+				<div class="q-quest-2">
+					<h3 class="q-label">If Green doesn't run Bernie, what would you do?</h3>
+					<!-- jquery radio buttons -->
+				</div>
+	
+			<div class="q-actions">
+				<%= f.submit "Submit" %>
+			</div>
+		</div>
+
+
+	<% end %>
+</div>

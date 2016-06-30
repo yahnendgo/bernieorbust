@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   
   
   root 'home#index'
-
+  resources :entries
 
   get 'home/index', as: 'home'
 
