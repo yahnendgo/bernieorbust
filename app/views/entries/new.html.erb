@@ -4,7 +4,7 @@
 		<div class="q-name">
 			<div class="q-first-name">
 				<%= f.label :fname, class: "q-label" %>
-				<%= f.text_field :lname, class: "q-input" %>
+				<%= f.text_field :fname, class: "q-input" %>
 			</div>
 			<div class="q-last-name">
 				<%= f.label :lname, class: "q-label" %>
@@ -30,18 +30,44 @@
 
 		<div class="q-quest-1">
 			<h3 class="q-label">If Bernie is not the democratic nominee, what would you do?</h3>
-			<!-- jquery radio buttons -->
-
-			
-				<!-- should only appear (jquery event listener) if option 2 is selected as an answer. if it is not, show submit button instead -->
-				<div class="q-quest-2">
-					<h3 class="q-label">If Green doesn't run Bernie, what would you do?</h3>
-					<!-- jquery radio buttons -->
-				</div>
-	
-			<div class="q-actions">
-				<%= f.submit "Submit" %>
+			<div>
+				<%= f.radio_button(:ans1, "Vote Green if it's Bernie or Jill") %> <span>Vote Green if it's Bernie or Jill</span>
 			</div>
+			<div>
+				<%= f.radio_button(:ans1, "Vote Green only if it's Bernie") %> <span>Vote Green only if it's Bernie</span>
+			</div>
+			<div>
+				<%= f.radio_button(:ans1, "Vote Libertarian") %> <span>Vote Libertarian</span>
+			</div>
+			<div>
+				<%= f.radio_button(:ans1, "Stay Home") %> <span>Stay Home</span>
+			</div>
+			<div>
+				<%= f.radio_button(:ans1, "Write in Bernie") %> <span>Write in Bernie</span>
+			</div>
+			<a href="#" class="q1-next">Next</a>
+		</div>
+		<!-- only shows when option 2 is checked -->
+		<div class="q-quest-2">
+			<h3 class="thank-you">Thank you for your pledge! Just one last question.
+			<h3 class="q-label"> If Green doesn't run Bernie, what would you do?</h3>
+			<div>
+				<%= f.radio_button(:ans2, "Vote Libertarian") %> <span>Vote Libertarian</span>
+			</div>
+			<div>
+				<%= f.radio_button(:ans2, "Stay Home") %> <span>Stay Home</span>
+			</div>
+			<div>
+				<%= f.radio_button(:ans2, "Write in Bernie") %> <span>Write in Bernie</span>
+			</div>
+		</div>
+		<!-- will show unless option 2 is checked -->
+		<div class="q-thanks">
+			<h3>Thank You! Please press the button below to submit your response</h3>
+		</div>
+		<!-- will show if option 2 is checked --> 
+		<div class="q-submit">
+			<%= f.submit "Submit" %>
 		</div>
 
 
