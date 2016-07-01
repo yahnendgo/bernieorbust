@@ -15,7 +15,7 @@
 
 		<div class="q-state">
 			<%= f.label :state, class: "q-label" %>
-			<!-- jquery drop down for state options -->
+			<%= f.select(:state, options_for_select(us_states), prompt: true) %>
 
 			<a href="#" class="q-state-next">Next</a>
 		</div>

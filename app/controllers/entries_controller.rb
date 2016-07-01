@@ -22,6 +22,6 @@ class EntriesController < ApplicationController
 	private
 
 	def entry_params
-		params.require(:entry).permit(:fname, :lname, :email, :ans1, :ans2)
+		params.require(:entry).permit(:fname, :lname, :state, :email, :ans1, :ans2)
 	end
 end
