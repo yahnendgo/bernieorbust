@@ -27,9 +27,19 @@ $(document).ready(function(){
 		$('.q-email').show();
 	});
 
+	$('.q-state-prev').on('click', function(){
+		$('.q-state').hide();
+		$('.q-name').show();
+	});
+
 	$('.q-email-next').on('click', function(){
 		$('.q-email').hide();
 		$('.q-quest-1').show();
+	});
+
+	$('.q-email-prev').on('click', function(){
+		$('.q-email').hide();
+		$('.q-state').show();
 	});
 
 	$('.q1-next').on('click', function(){
