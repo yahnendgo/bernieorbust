@@ -1,0 +1,118 @@
+<div class="stats-container">
+	<div class="q1-graph-container">
+		<h3>If Bernie is not the Democratic nominee, what would you do?</h3>  
+		<%= pie_chart Entry.group(:ans1).count %>
+	</div>
+	<div class="stats-sec1">
+		<a class="boj-link"><h4>Vote Green if it's Bernie or Jill (<%= @bern_or_jill.count %>)</h4></a>
+		<table class="bern_or_jill_ul stats_list">
+			<th>Name</th>
+			<th>State</th>
+			<th>Email</th>
+			<% @bern_or_jill.each do |b| %>
+				<tr>
+					<td> <%= fullname(b) %> </td>
+					<td> <%= b.state %> </td>
+					<td> <%= b.email %> </td>
+				</tr>
+			<% end %>
+		</table>
+		<a class="lib-link"><h4>Vote Libertarian (<%= @lib.count %>)</h4></a>
+		<table class="lib_ul stats_list">
+			<th>Name</th>
+			<th>State</th>
+			<th>Email</th>
+			<% @lib.each do |b| %>
+				<tr>
+					<td> <%= fullname(b) %> </td>
+					<td> <%= b.state %> </td>
+					<td> <%= b.email %> </td>
+				</tr>
+			<% end %>
+		</table>
+		<a class="stay-home-link"><h4>Stay Home (<%= @stay_home.count %>)</h4></a>
+		<table class="stay_home_ul stats_list">
+			<th>Name</th>
+			<th>State</th>
+			<th>Email</th>
+			<% @stay_home.each do |b| %>
+				<tr>
+					<td> <%= fullname(b) %> </td>
+					<td> <%= b.state %> </td>
+					<td> <%= b.email %> </td>
+				</tr>
+			<% end %>
+		</table>
+		<a class="write-in-link"><h4>Write in Bernie (<%= @write.count %>)</h4></a>
+		<table class="write_in_ul stats_list">
+			<th>Name</th>
+			<th>State</th>
+			<th>Email</th>
+			<% @write.each do |b| %>
+				<tr>
+					<td> <%= fullname(b) %> </td>
+					<td> <%= b.state %> </td>
+					<td> <%= b.email %> </td>
+				</tr>
+			<% end %>
+		</table>
+		<a class="bern-only-link"><h4>Vote Green only if it's Bernie (<%= @bern_only.count %>)</h4></a>
+		<table class="bern_only_ul stats_list">
+			<th>Name</th>
+			<th>State</th>
+			<th>Email</th>
+			<% @bern_only.each do |b| %>
+				<tr>
+					<td> <%= fullname(b) %> </td>
+					<td> <%= b.state %> </td>
+					<td> <%= b.email %> </td>
+				</tr>
+			<% end %>
+		</table>
+	</div>
+	<div class="stats_sec2">
+		<div class="q2-graph-container">
+			<h3>If Green doesn't run Bernie, what would you do?</h3>
+			<%= pie_chart("Vote Libertarian" => @bern_lib.count, "Stay Home" => @bern_home.count, "Write in Bernie" => @bern_write.count) %>
+		</div>
+		<a class="bern-lib-link"><h4>Bernie Only - Vote Libertarian (<%= @bern_lib.count %>)</h4></a>
+		<table class="bern_lib_ul stats_list">
+			<th>Name</th>
+			<th>State</th>
+			<th>Email</th>
+			<% @bern_lib.each do |b| %>
+				<tr>
+					<td> <%= fullname(b) %> </td>
+					<td> <%= b.state %> </td>
+					<td> <%= b.email %> </td>
+				</tr>
+			<% end %>
+		</table>
+		<a class="bern-home-link"><h4>Bernie Only - Stay Home (<%= @bern_home.count %>)</h4></a>
+		<table class="bern_home_ul stats_list">
+			<th>Name</th>
+			<th>State</th>
+			<th>Email</th>
+			<% @bern_home.each do |b| %>
+				<tr>
+					<td> <%= fullname(b) %> </td>
+					<td> <%= b.state %> </td>
+					<td> <%= b.email %> </td>
+				</tr>
+			<% end %>
+		</table>
+		<a class="bern-write-link"><h4>Bernie Only - Write in Bernie (<%= @bern_write.count %>)</h4></a>
+		<table class="bern_write_ul stats_list">
+			<th>Name</th>
+			<th>State</th>
+			<th>Email</th>
+			<% @bern_write.each do |b| %>
+				<tr>
+					<td> <%= fullname(b) %> </td>
+					<td> <%= b.state %> </td>
+					<td> <%= b.email %> </td>
+				</tr>
+			<% end %>
+		</table>
+	</div>
+</div>
