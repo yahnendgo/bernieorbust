@@ -1,4 +1,78 @@
 <div class="stats-container">
-	 <%= javascript_include_tag "//www.google.com/jsapi", "chartkick" %>
-	<%= pie_chart Entry.group(:ans1).count %>
+	<div class="q1-graph-container">
+		<h3>If Bernie is not the Democratic nominee, what would you do?</h3>  
+		<%= pie_chart Entry.group(:ans1).count %>
+	</div>
+	<div class="stats-col1">
+		<h4>Vote Green if it's Bernie or Jill (<%= @bern_or_jill.count %>)</h4>
+		<ul class="bern_or_jill_ul stats_list">
+			<% @bern_or_jill.each do |b| %>
+				<div>
+					<li><%= entry_list(b) %></li>
+				</div>
+			<% end %>
+		</ul>
+		<h4>Vote Libertarian (<%= @lib.count %>)</h4>
+		<ul class="lib_ul stats_list">
+		<% @lib.each do |b|%>
+			<div>
+				<li><%= entry_list(b) %></li>
+			</div>
+		<% end %>
+		</ul>	
+		<h4>Stay Home (<%= @stay_home.count %>)</h4>
+		<ul class="stay_home_ul stats_list">
+			<% @stay_home.each do |b| %>
+				<div>
+					<%= entry_list(b) %>
+				</div>
+			<% end %>
+		</ul>
+		<h4>Write in Bernie (<%= @write.count %>)</h4>
+		<ul class="write_in_ul stats_list">
+			<% @write.each do |b| %>
+				<div>
+					<%= entry_list(b) %>
+				</div>
+			<% end %>
+		</ul>
+		<h4>Vote Green only if it's Bernie (<%= @bern_only.count %>)</h4>
+		<ul class="bern_only_ul stats_list">
+			<% @bern_only.each do |b| %>
+				<div>
+					<%= entry_list(b) %>
+				</div>
+			<% end %>
+		</ul>
+	</div>
+	<div class="stats_col2">
+		<div class="q2-graph-container">
+			<h3>If Green doesn't run Bernie, what would you do?</h3>  
+			<%= pie_chart("Vote Libertarian" => @bern_lib.count, "Stay Home" => @bern_home.count, "Write in Bernie" => @bern_write.count) %>
+		</div>
+		<h4>Bernie Only - Vote Libertarian (<%= @bern_lib.count %>)</h4>
+		<ul class="Bern_lib_ul stats_list">
+			<% @bern_lib.each do |b| %>
+				<div>
+					<%= entry_list(b) %>
+				</div>
+			<% end %>
+		</ul>
+		<h4>Bernie Only - Stay Home (<%= @bern_home.count %>)</h4>
+		<ul class="bern_home_ul stats_list">
+			<% @bern_home.each do |b| %>
+				<div>
+					<%= entry_list(b) %>
+				</div>
+			<% end %>
+		</ul>
+		<h4>Bernie Only - Write in Bernie (<%= @bern_write.count %>)</h4>
+		<ul class="bern_write_ul stats_list">
+			<% @bern_write.each do |b| %>
+				<div>
+					<%= entry_list(b) %>
+				</div>
+			<% end %>
+		</ul>
+	</div>
 </div>
