@@ -1,0 +1,4 @@
+<div class="stats-container">
+	 <%= javascript_include_tag "//www.google.com/jsapi", "chartkick" %>
+	<%= pie_chart Entry.group(:ans1).count %>
+</div>
