@@ -53,5 +53,4 @@ $(document).ready(function(){
 				$('.q-submit').show();
 			}
 	});
-
 });
